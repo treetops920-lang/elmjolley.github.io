@@ -1,0 +1,308 @@
+#intro {
+    position: fixed;
+    left: 5px;
+    top: 15em;
+}
+
+section {
+    position: fixed;
+    bottom: 15em;
+    font-size: 20px;
+    bottom: em;
+    width: 25em;
+    height: auto;
+    line-height: 25px;
+
+}
+
+#indeed {
+    width: 75px;
+    height: auto;
+}
+
+#gmail {
+    width: 45px;
+    height: auto;
+}
+
+#banner {
+    width: 75em;
+    height: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+article {
+    position: fixed;
+    bottom: 4em;
+    font-size: 20px;
+}
+
+
+table {
+    border: 10px solid rgb(70, 83, 69);
+    position: fixed;
+    bottom: 15em;
+    right: 5em;
+}
+
+th,
+td {
+    border: 1px solid gray;
+    padding: 5px;
+    vertical-align: top;
+    text-align: left;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+
+#firstCol {
+    background-color: rgb(114, 151, 134);
+    width: 150px;
+}
+
+#intro,
+section,
+article,
+table {
+    position: static;
+    width: 95%;
+    /* Fluid width */
+    margin: 1rem auto;
+    /* Center with top/bottom spacing */
+    padding: 10px;
+}
+
+#banner {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
+#intro {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+section {
+    font-size: 16px;
+    /* Smaller, more readable font for mobile */
+    line-height: 22px;
+}
+
+article {
+    font-size: 18px;
+}
+
+#indeed {
+    width: 60px;
+    height: auto;
+}
+
+#gmail {
+    width: 40px;
+    height: auto;
+}
+
+/* Table adjustments for smaller screens */
+table {
+    border: 5px solid rgb(70, 83, 69);
+    /* Reduced border size */
+    width: 98%;
+    /* Ensure tables are scrollable if content overflows */
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* Keeps content cells on one line */
+}
+
+th,
+td {
+    border: 1px solid gray;
+    padding: 8px;
+    /* Slightly more padding for touch targets */
+    vertical-align: top;
+    text-align: left;
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+
+#firstCol {
+    
+    min-width: 120px;
+    /* Use min-width to ensure space */
+}
+
+#dayCol {
+    width: 75px;
+    /* Define column width */
+}
+
+thead {
+    background-color: rgb(181, 201, 181);
+}
+
+
+#dayCol {
+    column-width: 75px;
+}
+
+@media (max-width: 450px) {
+
+    #intro,
+    section,
+    article {
+        padding: 5px;
+        /* Reduce padding slightly */
+        margin: 0.5rem auto;
+        /* Less vertical space */
+    }
+
+    #intro {
+        font-size: 1rem;
+        /* Slightly smaller intro text */
+    }
+
+    section {
+        font-size: 14px;
+        /* Smallest body text for narrow screens */
+        line-height: 1.4;
+    }
+
+    article {
+        font-size: 16px;
+    }
+
+    #indeed {
+        width: 50px;
+    }
+
+    #gmail {
+        width: 35px;
+    }
+
+    table {
+        border: 3px solid rgb(70, 83, 69);
+    }
+
+    th,
+    td {
+        padding: 4px;
+    }
+}
+@media (min-width: 451px) and (max-width: 1023px) {
+    /* Constrain the maximum width of content blocks for better readability on wider screens */
+    #intro,
+    section,
+    article,
+    table {
+        max-width: 800px; /* Optimal width for flowing text content */
+    }
+
+    /* Slightly increase text size for tablet screens */
+    #intro {
+        font-size: 1.25rem;
+    }
+
+    section {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    article {
+        font-size: 20px;
+    }
+
+    /* Make the banner a bit larger, but still centered and flowing */
+    #banner {
+        max-width: 900px;
+        margin-bottom: 2rem; /* Add more space below the banner */
+    }
+
+    /* Refine table appearance */
+    table {
+        border: 7px solid rgb(70, 83, 69);
+        white-space: normal; /* Allow text wrapping in cells by default */
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 10px; /* More padding for better spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+
+
+    #intro {
+
+        position: fixed;
+        left: 5px;
+        top: 15em;
+         font-size: 16px;
+        width: 25em;
+        line-height: 20px;
+        margin: 0;
+    }
+
+    section {
+        position: fixed;
+        left: 5px;
+        bottom: 15em;
+        font-size: 20px;
+        width: 25em;
+        line-height: 25px;
+        margin: 0;
+    }
+
+    #banner {
+        width: 40em;
+        height: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+        margin: 0;
+    }
+
+    article {
+        position: fixed;
+        left: 5px;
+        bottom: 3em;
+        font-size: 15px;
+        margin: 0;
+        width: auto;
+    }
+
+    table {
+        border: 10px solid rgb(70, 83, 69);
+        position: fixed;
+        bottom: 7em;
+        right: 5em;
+        width: auto;
+        overflow-x: visible;
+        display: table;
+        white-space: normal;
+        margin: 0;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+}
+
+thead {
+    background-color: rgb(181, 201, 181);
+}
