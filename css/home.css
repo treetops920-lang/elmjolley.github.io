@@ -8,12 +8,28 @@ body {
     margin: 0;
 }
 
+.school-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
 #banner {
-    display: block;
-    width: min(75%, 750px);
+    max-width: 450px;
+    width: 100%;
     height: auto;
-    margin: 1.5rem auto 1rem;
-    filter: drop-shadow(0 10px 24px rgba(74, 66, 56, 0.12));
+}
+
+#banner2 {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+}
+
+.school-logos table {
+    width: 100%;
+    max-width: 450px;
 }
 
 #logo {
@@ -23,13 +39,8 @@ body {
     margin: 0 auto 1rem;
 }
 
-#intro,
-article,
-table {
-    width: min(95%, 1000px);
-    margin: 1rem auto;
-    box-sizing: border-box;
-}
+
+
 
 #intro,
 article {
@@ -62,9 +73,6 @@ article {
     padding-left: 1.3rem;
 }
 
-article {
-    font-size: 1rem;
-}
 
 article h2 {
     margin-top: 0;
@@ -160,7 +168,7 @@ tbody tr:hover td {
     background: #ffffff;
     width: 150%;
     height: 100%;
-   
+
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -221,6 +229,14 @@ tbody tr:hover td {
     border: none;
     cursor: pointer;
     font-family: inherit;
+}
+
+#intro {
+    margin-bottom: 10px;
+}
+
+article {
+    margin-top: 10px;
 }
 
 @media (max-width: 450px) {
