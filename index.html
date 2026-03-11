@@ -66,13 +66,18 @@
                     <span>Indeed</span>
                 </a>
 
-                <a href="https://github.com/YOURUSERNAME" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/treetops920-lang" class="contact-btn" target="_blank"
+                    rel="noopener noreferrer">
                     <img src="images/github.png" alt="GitHub icon" class="contact-icon">
                     <span>GitHub</span>
                 </a>
-
-                <a href="resume.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="#" class="contact-btn" onclick="openResume()">
                     <span>Resume</span>
+                </a>
+                <a href="https://treetops920-lang.github.io/AcademTick.github.io/" class="contact-btn"
+                    onclick="openProjectDisclaimer(event, this.href)">
+                    <img src="images/AcademTick-logo.png" alt="AcademTick icon" class="contact-icon">
+                    <span>AcademTick</span>
                 </a>
             </div>
         </article>
@@ -139,6 +144,75 @@
             <p>&copy; 2026 Charlotte "Elm" Jolley.</p>
         </div>
     </footer>
+
+    <!-- fuck ass shit thats gotta be here to make other shit work-->
+    <div id="projectModal" class="resume-modal">
+        <div class="resume-window project-window">
+            <button class="resume-close" onclick="closeProjectDisclaimer()" aria-label="Close popup">✕</button>
+
+            <div class="project-popup-content">
+                <h2>Before You Visit</h2>
+                <p>
+                    Hey! Thanks for checking this out. Just a heads-up: this is a non-functioning demo site created for
+                    a tech showcase.
+                    Feel free to look around.
+                </p>
+
+                <p>
+                    <strong>Admin login:</strong> admin OR admin_kid<br>
+                    <strong>Password:</strong> test OR TickBot <br>
+                    different login's are for different view type, admin_kid is meant for k-5th while admin is regular view
+                </p>
+
+                <p>
+                    This project is part of my GitHub and portfolio work.
+                </p>
+
+                <div class="project-popup-actions">
+                    <a id="continueProjectLink" href="#" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                        Continue to Site
+                    </a>
+
+                    <button class="contact-btn project-cancel-btn" onclick="closeProjectDisclaimer()">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProjectDisclaimer(event, url) {
+            event.preventDefault();
+            document.getElementById("continueProjectLink").href = url;
+            document.getElementById("projectModal").style.display = "flex";
+        }
+
+        function closeProjectDisclaimer() {
+            document.getElementById("projectModal").style.display = "none";
+        }
+    </script>
+
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-window">
+            <button class="resume-close" onclick="closeResume()" aria-label="Close resume">✕</button>
+
+            <div class="resume-frame-wrap">
+                <embed src="images/Resume-2026.png" type="application/pdf" class="resume-embed">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openResume() {
+            document.getElementById("resumeModal").style.display = "flex";
+        }
+
+        function closeResume() {
+            document.getElementById("resumeModal").style.display = "none";
+        }
+    </script>
+
 </body>
 
 </html>
