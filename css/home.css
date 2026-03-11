@@ -10,7 +10,7 @@ body {
 
 #banner {
     display: block;
-    width: min(100%, 900px);
+    width: min(75%, 750px);
     height: auto;
     margin: 1.5rem auto 1rem;
     filter: drop-shadow(0 10px 24px rgba(74, 66, 56, 0.12));
@@ -101,6 +101,7 @@ table {
     display: block;
     white-space: nowrap;
     background: rgba(255, 255, 255, 0.94);
+    margin-top: -150px;
 }
 
 th,
@@ -129,10 +130,7 @@ caption {
     padding: 0.8rem 0;
 }
 
-#firstCol {
-    background-color: rgba(121, 201, 158, 0.25);
-    min-width: 120px;
-}
+
 
 #dayCol {
     width: 75px;
@@ -147,6 +145,7 @@ tbody tr:hover td {
 }
 
 @media (max-width: 450px) {
+
     #intro,
     article,
     table {
@@ -181,7 +180,88 @@ tbody tr:hover td {
     }
 }
 
+.contact-card {
+    padding: 1.3rem 1.4rem;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+    color: #4A4238;
+}
+
+.contact-card p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #3a3d40;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1rem;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #4D5359 0%, #508484 100%);
+    color: #f5f7f6;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 18px rgba(74, 66, 56, 0.14);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    min-width: 155px;
+    justify-content: center;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(74, 66, 56, 0.18);
+    background: linear-gradient(135deg, #508484 0%, #79C99E 100%);
+    color: #1f2422;
+}
+
+.contact-btn:visited,
+.contact-btn:active {
+    color: #f5f7f6;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+@media (max-width: 450px) {
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
 @media (min-width: 451px) and (max-width: 1023px) {
+
     #intro,
     article,
     table {
