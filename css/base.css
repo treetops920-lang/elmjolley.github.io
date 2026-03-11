@@ -1,59 +1,77 @@
 /*
-        Author: Elm Jolley
-        Date:  
-        Filename: home.css
+    Author: Elm Jolley
+    Date:
+    Filename: base.css
 */
+
+:root {
+    --earth-dark: #4A4238;
+    --slate: #4D5359;
+    --teal: #508484;
+    --sage: #79C99E;
+    --lime: #97DB4F;
+
+    --bg-main: #eef3ee;
+    --bg-soft: #f7faf7;
+    --text-main: #2f3133;
+    --text-light: #f5f7f6;
+    --border-soft: rgba(77, 83, 89, 0.18);
+    --shadow-soft: 0 10px 30px rgba(74, 66, 56, 0.12);
+}
+
 html {
-    background-color: #a0b0a0;
-    /* merrieweather is not a standard font, using a similar generic serif */
-    font-family: 'Merriweather', Georgia, serif; 
-    color: black;
+    background: linear-gradient(180deg, #edf3ef 0%, #e3ece6 100%);
+    font-family: "Merriweather", Georgia, serif;
+    color: var(--text-main);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
+    color: var(--text-main);
 }
 
+/* ---------- Links ---------- */
 a {
-    color: #acbec3;
+    color: var(--teal);
     text-decoration: none;
-    list-style: none;
-    font-size: 18px; /* Reduced for mobile readability */
-    display: inline-block; /* Ensure clickable area is clear */
-    padding: 0.5rem 0.8rem; /* Add padding for touch targets */
+    font-size: 18px;
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 a:hover {
-    color: #e4f0f1;
+    color: var(--lime);
+    transform: translateY(-1px);
 }
 
-a:visited, a:active {
-    color: rgb(160, 197, 193);
+a:visited,
+a:active {
+    color: var(--teal);
 }
 
-/* --- Mobile Element Flow --- */
-
+/* ---------- Shared logo ---------- */
 #logo {
-    /* Changed from fixed to static/block for content flow */
-    position: static;
     display: block;
-    height: 100px; /* Specific height for mobile logo */
+    height: 100px;
     width: auto;
-    margin: 0.5em auto; /* Center the logo */
-    text-align: center;
-   
+    margin: 0.75rem auto;
+    filter: drop-shadow(0 6px 14px rgba(74, 66, 56, 0.15));
 }
 
+/* ---------- Navigation ---------- */
 nav {
-    /* Changed from fixed to static for content flow */
-    position: static;
-    background-color: rgb(93, 146, 165);
-    text-align: center; /* Center the navigation links */
-    height: auto;
+    background: linear-gradient(135deg, var(--earth-dark) 0%, var(--slate) 45%, var(--teal) 100%);
+    text-align: center;
     width: 100%;
-    font-weight: bolder;
-    padding: 0.5rem 0;
+    font-weight: bold;
+    padding: 0.7rem 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 nav ul {
@@ -63,86 +81,92 @@ nav ul {
 }
 
 nav li {
-    /* Links may wrap to a new line if necessary */
     display: inline-block;
     letter-spacing: 1px;
 }
 
+nav a {
+    font-size: 18px;
+    color: var(--text-light);
+    border-radius: 999px;
+    padding: 0.55rem 1rem;
+}
+
+nav a:hover {
+    color: var(--earth-dark);
+    background-color: var(--lime);
+}
+
+/* ---------- Footer ---------- */
 footer {
-    /* Changed from absolute to static/relative to flow naturally after content */
-    position: relative; 
-    margin-top: 2rem; /* Space from content above */
+    margin-top: 2rem;
     width: 100%;
-    height: 2.5em;
-    padding-top: 0.5em;
-    background-color: rgba(93, 146, 165, 0.8);
+    min-height: 2.5em;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(135deg, var(--slate) 0%, var(--earth-dark) 100%);
     text-align: center;
     font-size: 12px;
-    color: rgba(188, 210, 199, 0.716);
+    color: rgba(245, 247, 246, 0.92);
+    border-top: 3px solid var(--sage);
 }
 
-/* |====================================================================|
-| 2. SMALL PHONE OVERRIDE (@media max-width: 450px)                    |
-|    - Further reduces font size for narrow screens.                     |
-|====================================================================|
-*/
+footer p {
+    margin: 0;
+}
 
+/* ---------- Shared card feel ---------- */
+section,
+article,
+table {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* ---------- Small phones ---------- */
 @media (max-width: 450px) {
     #logo {
-        height: 75px; /* Smaller logo for smallest screens */
-        margin-top: 0.25em;
+        height: 75px;
+        margin-top: 0.4rem;
     }
 
     nav a {
-        font-size: 16px; /* Minimized font size for navigation links */
-        padding: 0.4rem 0.6rem;
+        font-size: 16px;
+        padding: 0.4rem 0.75rem;
     }
 }
 
-
-/* |====================================================================|
-| 3. DESKTOP STYLES (@media min-width: 1024px)                         |
-|    - Restores the original fixed and absolute positioning.             |
-|====================================================================|
-*/
-
-@media (min-width: 1024px) {
-    
-    /* Restore #logo to fixed position */
+/* ---------- Tablets and up ---------- */
+@media (min-width: 768px) {
     #logo {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 15em; /* Restore original height */
-        width: auto;
-        margin-left: 1em;
-        margin-top: 0.5em;
-        display: block; /* Ensure it stays block */
+        height: 120px;
     }
 
-    /* Restore nav to fixed position and size */
-    nav {
-        position: fixed;
-        left: 15em;
-        top: 0em;
-        text-align: left;
-        height: 3em; /* Restore original height */
-        width: 29em; /* Restore original width */
-        padding: 0;
-    }
-    
     nav a {
-        font-size: 25px; /* Restore original font size */
-        padding: 0;
-        line-height: 3em; /* Center text vertically with nav height */
-        padding-left: 10px; /* Add some spacing */
+        font-size: 20px;
     }
-    
-    /* Restore footer to absolute position at the bottom of the document */
+
     footer {
-        position: absolute;
-        bottom: 0;
-        margin-top: 0;
-        height: 2.5em;
+        font-size: 13px;
+    }
+}
+
+/* ---------- Large desktop ---------- */
+@media (min-width: 1024px) {
+    #logo {
+        height: 140px;
+    }
+
+    nav {
+        padding: 0.8rem 0;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+
+    footer {
+        font-size: 13px;
     }
 }

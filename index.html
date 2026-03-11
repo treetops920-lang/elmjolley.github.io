@@ -1,124 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!--
         Author: Elm Jolley
-        Date:  
+        Date:
         Filename: index.html
     -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
 
-    <link rel="font" href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <img src="images/mountines.png" alt="mountain graphic" id="banner">
-
     <img src="images/logo.png" alt="Elm Jolley's Logo" id="logo">
-
 
     <nav id="links">
         <ul>
             <li><a href="ej_bio.html">About Me</a></li>
-
         </ul>
     </nav>
-    <table>
-        <caption>General Schedual</caption>
-        <colgroup>
-            <col id="firstCol">
-            <col id="dayCol" span="6">
-        </colgroup>
-        <thead>
-            <tr>
 
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednsday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-                <th>Saturday</th>
-                <th>Sunday</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
+    <div class="home-layout">
+        <section id="intro">
+            <h1>Introductions</h1>
+            <h2>Welcome to my site</h2>
+            <p>Hello, I'm Elm Jolley. I'm an IT student at Kettering Fairmont High School.</p>
 
-                <td>work 5pm</td>
-                <td>Internship 1:30pm</td>
-                <td></td>
-                <td>Internship 1:30pm, work 6pm</td>
-                <td>work 5pm</td>
-                <td></td>
-                <td></td>
+            <h1>Work History</h1>
+            <ol>
+                <li>Intern at The Education Connection, September 2025 - present</li>
+                <li>Donatos Pizza, May 2025 - present</li>
+                <li>Jersey Mike's, October 2024 - February 2025</li>
+                <li>Huey Magoo’s, October 2023 - October 2024</li>
+            </ol>
+        </section>
 
-            </tr>
-            <tr>
+        <img src="images/College-of-Engineering-Logo-removebg-preview.png" alt="Mountain graphic" id="banner">
 
-                <td>work 5pm</td>
-                <td>Internship 1:30pm</td>
-                <td></td>
-                <td>Internship 1:30pm, work 6pm</td>
-                <td>work 5pm</td>
-                <td></td>
-                <td></td>
-            <tr>
+        <article>
+            <h2>Contacts</h2>
+            <a href="https://profile.indeed.com/p/f9d9wls">
+                <img src="images/indeed.png" alt="Indeed link" id="indeed">
+            </a>
+            <a href="mailto:e.jolleywork@gmail.com">
+                <img src="images/gmail.png" alt="Gmail link" id="gmail">
+            </a>
+        </article>
 
-                <td>work 5pm</td>
-                <td>Internship 1:30pm</td>
-                <td></td>
-                <td>Internship 1:30pm, work 6pm</td>
-                <td>work 5pm</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
+        <table>
+            <caption>General Schedule</caption>
+            <colgroup>
+                <col id="firstCol">
+                <col id="dayCol" span="6">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Work 5pm</td>
+                    <td>Internship 1:30pm</td>
+                    <td></td>
+                    <td>Internship 1:30pm, Work 6pm</td>
+                    <td>Work 5pm</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Work 5pm</td>
+                    <td>Internship 1:30pm</td>
+                    <td></td>
+                    <td>Internship 1:30pm, Work 6pm</td>
+                    <td>Work 5pm</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Work 5pm</td>
+                    <td>Internship 1:30pm</td>
+                    <td></td>
+                    <td>Internship 1:30pm, Work 6pm</td>
+                    <td>Work 5pm</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Work 5pm</td>
+                    <td>Internship 1:30pm</td>
+                    <td></td>
+                    <td>Internship 1:30pm, Work 6pm</td>
+                    <td>Work 5pm</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-                <td>work 5pm</td>
-                <td>Internship 1:30pm</td>
-                <td></td>
-                <td>Internship 1:30pm, work 6pm</td>
-                <td>work 5pm</td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    <section id="intro">
-
-        <h1>Introductions</h1>
-        <h2>Welcome to my site</h2>
-        <p>Hello, I'm Elm Jolley. Im an IT student at Ketteriong Fairmont High School</p>
-
-        <h1>Work History</h1>
-        <ol>
-            <li>Intern at The Education Connection, September 2025 - present</li>
-            <li>Donatos Pizza, May 2025 - present</li>
-            <li>Jersey Mike's, October 2024 - February 2025</li>
-            <li>Huey Magoos, October 2024 - October 2025</li>
-        </ol>
-    </section>
-    <article>
-        <h2>Contacts</h2>
-        <a href="https://profile.indeed.com/p/f9d9wls">
-            <img src="images/indeed.png" alt="indeed link" id="indeed" />
-        </a>
-        <a href="mailto:e.jolleywork@gmail.com">
-            <img src="images/gmail.png" alt="gmail link" id="gmail" />
-        </a>
-
-    </article>
     <footer>
         <div class="footer-text">
-            <p>&copy; 2025 Charlotte "Elm" Jolley. All rights reserved.</p>
+            <p>&copy; 2025 Charlotte "Elm" Jolley.</p>
         </div>
     </footer>
-
 </body>
-
 </html>

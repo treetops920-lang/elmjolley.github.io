@@ -1,104 +1,87 @@
-#intro {
-    position: fixed;
-    left: 5px;
-    top: 15em;
-}
+/*
+    Author: Elm Jolley
+    Date:
+    Filename: home.css
+*/
 
-section {
-    position: fixed;
-    bottom: 15em;
-    font-size: 20px;
-    bottom: em;
-    width: 25em;
-    height: auto;
-    line-height: 25px;
-
-}
-
-#indeed {
-    width: 75px;
-    height: auto;
-}
-
-#gmail {
-    width: 45px;
-    height: auto;
+body {
+    margin: 0;
 }
 
 #banner {
-    width: 75em;
+    display: block;
+    width: min(100%, 900px);
     height: auto;
-    position: fixed;
-    right: 0;
-    top: 0;
+    margin: 1.5rem auto 1rem;
+    filter: drop-shadow(0 10px 24px rgba(74, 66, 56, 0.12));
 }
 
-article {
-    position: fixed;
-    bottom: 4em;
-    font-size: 20px;
-}
-
-
-table {
-    border: 10px solid rgb(70, 83, 69);
-    position: fixed;
-    bottom: 15em;
-    right: 5em;
-}
-
-th,
-td {
-    border: 1px solid gray;
-    padding: 5px;
-    vertical-align: top;
-    text-align: left;
-}
-
-caption {
-    caption-side: top;
-    text-align: center;
-    font-size: 1.5em;
-    padding-bottom: 5px;
-}
-
-#firstCol {
-    background-color: rgb(114, 151, 134);
-    width: 150px;
-}
-
-#intro,
-section,
-article,
-table {
-    position: static;
-    width: 95%;
-    /* Fluid width */
-    margin: 1rem auto;
-    /* Center with top/bottom spacing */
-    padding: 10px;
-}
-
-#banner {
-    position: static;
-    width: 100%;
+#logo {
+    display: block;
+    width: min(220px, 60%);
     height: auto;
     margin: 0 auto 1rem;
 }
 
-#intro {
-    font-size: 1.1rem;
-    line-height: 1.4;
+#intro,
+article,
+table {
+    width: min(95%, 1000px);
+    margin: 1rem auto;
+    box-sizing: border-box;
 }
 
-section {
-    font-size: 16px;
-    /* Smaller, more readable font for mobile */
-    line-height: 22px;
+#intro,
+article {
+    padding: 1.3rem 1.4rem;
+}
+
+#intro {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+#intro h1 {
+    color: #4A4238;
+    font-size: 1.8rem;
+    margin-bottom: 0.35rem;
+}
+
+#intro h2 {
+    color: #508484;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+#intro p,
+#intro li {
+    color: #3a3d40;
+}
+
+#intro ol {
+    padding-left: 1.3rem;
 }
 
 article {
-    font-size: 18px;
+    font-size: 1rem;
+}
+
+article h2 {
+    margin-top: 0;
+    color: #4A4238;
+}
+
+#indeed,
+#gmail {
+    vertical-align: middle;
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#indeed:hover,
+#gmail:hover {
+    transform: translateY(-2px) scale(1.03);
+    filter: drop-shadow(0 6px 12px rgba(80, 132, 132, 0.22));
 }
 
 #indeed {
@@ -111,78 +94,77 @@ article {
     height: auto;
 }
 
-/* Table adjustments for smaller screens */
 table {
-    border: 5px solid rgb(70, 83, 69);
-    /* Reduced border size */
-    width: 98%;
-    /* Ensure tables are scrollable if content overflows */
-    display: block;
+    border-collapse: collapse;
+    border: 2px solid rgba(74, 66, 56, 0.18);
     overflow-x: auto;
+    display: block;
     white-space: nowrap;
-    /* Keeps content cells on one line */
+    background: rgba(255, 255, 255, 0.94);
 }
 
 th,
 td {
-    border: 1px solid gray;
-    padding: 8px;
-    /* Slightly more padding for touch targets */
+    border: 1px solid rgba(77, 83, 89, 0.18);
+    padding: 10px;
     vertical-align: top;
     text-align: left;
+}
+
+th {
+    color: #f5f7f6;
+    background: linear-gradient(135deg, #4D5359 0%, #508484 100%);
+}
+
+td {
+    color: #2f3133;
 }
 
 caption {
     caption-side: top;
     text-align: center;
-    font-size: 1.2em;
-    padding-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4A4238;
+    padding: 0.8rem 0;
 }
 
 #firstCol {
-    
+    background-color: rgba(121, 201, 158, 0.25);
     min-width: 120px;
-    /* Use min-width to ensure space */
 }
 
 #dayCol {
     width: 75px;
-    /* Define column width */
 }
 
-thead {
-    background-color: rgb(181, 201, 181);
+tbody tr:nth-child(even) td {
+    background-color: rgba(121, 201, 158, 0.08);
 }
 
-
-#dayCol {
-    column-width: 75px;
+tbody tr:hover td {
+    background-color: rgba(151, 219, 79, 0.14);
 }
 
 @media (max-width: 450px) {
+    #intro,
+    article,
+    table {
+        width: 94%;
+        margin: 0.75rem auto;
+    }
 
     #intro,
-    section,
     article {
-        padding: 5px;
-        /* Reduce padding slightly */
-        margin: 0.5rem auto;
-        /* Less vertical space */
+        padding: 1rem;
     }
 
     #intro {
-        font-size: 1rem;
-        /* Slightly smaller intro text */
-    }
-
-    section {
-        font-size: 14px;
-        /* Smallest body text for narrow screens */
-        line-height: 1.4;
+        font-size: 0.95rem;
     }
 
     article {
-        font-size: 16px;
+        font-size: 0.95rem;
     }
 
     #indeed {
@@ -190,119 +172,71 @@ thead {
     }
 
     #gmail {
-        width: 35px;
-    }
-
-    table {
-        border: 3px solid rgb(70, 83, 69);
+        width: 34px;
     }
 
     th,
     td {
-        padding: 4px;
+        padding: 6px;
     }
 }
+
 @media (min-width: 451px) and (max-width: 1023px) {
-    /* Constrain the maximum width of content blocks for better readability on wider screens */
     #intro,
-    section,
     article,
     table {
-        max-width: 800px; /* Optimal width for flowing text content */
+        max-width: 850px;
     }
 
-    /* Slightly increase text size for tablet screens */
     #intro {
-        font-size: 1.25rem;
+        font-size: 1.05rem;
     }
 
-    section {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    article {
-        font-size: 20px;
-    }
-
-    /* Make the banner a bit larger, but still centered and flowing */
-    #banner {
-        max-width: 900px;
-        margin-bottom: 2rem; /* Add more space below the banner */
-    }
-
-    /* Refine table appearance */
     table {
-        border: 7px solid rgb(70, 83, 69);
-        white-space: normal; /* Allow text wrapping in cells by default */
-        overflow-x: auto;
-    }
-
-    th, td {
-        padding: 10px; /* More padding for better spacing */
+        white-space: normal;
     }
 }
 
 @media (min-width: 1024px) {
-
-
-    #intro {
-
-        position: fixed;
-        left: 5px;
-        top: 15em;
-         font-size: 16px;
-        width: 25em;
-        line-height: 20px;
-        margin: 0;
+    .home-layout {
+        width: min(1250px, 94%);
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        grid-template-areas:
+            "intro banner"
+            "contacts schedule";
+        gap: 2rem;
+        align-items: start;
     }
 
-    section {
-        position: fixed;
-        left: 5px;
-        bottom: 15em;
-        font-size: 20px;
-        width: 25em;
-        line-height: 25px;
+    #intro {
+        grid-area: intro;
+        width: 100%;
         margin: 0;
+        font-size: 1.05rem;
     }
 
     #banner {
-        width: 40em;
-        height: auto;
-        position: fixed;
-        right: 0;
-        top: 0;
+        grid-area: banner;
+        width: 100%;
+        max-width: 100%;
         margin: 0;
+        justify-self: end;
     }
 
     article {
-        position: fixed;
-        left: 5px;
-        bottom: 3em;
-        font-size: 15px;
+        grid-area: contacts;
+        width: 100%;
         margin: 0;
-        width: auto;
     }
 
     table {
-        border: 10px solid rgb(70, 83, 69);
-        position: fixed;
-        bottom: 7em;
-        right: 5em;
-        width: auto;
-        overflow-x: visible;
+        grid-area: schedule;
+        width: 100%;
+        margin: 0;
         display: table;
         white-space: normal;
-        margin: 0;
+        overflow-x: visible;
     }
-
-    th,
-    td {
-        padding: 5px;
-    }
-}
-
-thead {
-    background-color: rgb(181, 201, 181);
 }
